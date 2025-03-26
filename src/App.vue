@@ -4,16 +4,18 @@ import FilterAside from "@/components/FilterAside.vue";
 import DisplayCardAlbum from "@/components/DisplayCardAlbum.vue";
 import {ref} from "vue";
 
-
-const isStock = ref(null)
-const isInStock = (data) => {
-  console.log(data.value)
-  isStock.value = data.value
+const sortValue = ref("")
+const sortBy = (dataSelect) => {
+  console.log(dataSelect)
+  sortValue.value = dataSelect
 }
 
-
+const isStock = ref(null)
+const isInStock = (dataStock) => {
+  console.log(dataStock)
+  isStock.value = dataStock
+}
 </script>
-
 
 <template>
   <NavBar/>
@@ -21,9 +23,11 @@ const isInStock = (data) => {
     <div class="flex flex-row ">
       <FilterAside
           @isInStock="isInStock"
+          @sortBy="sortBy"
       />
       <DisplayCardAlbum
-      :isStock="isStock"
+          :isStock="isStock"
+          :isSelected="sortValue"
       />
     </div>
   </div>
