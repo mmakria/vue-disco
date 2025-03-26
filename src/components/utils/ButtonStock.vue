@@ -4,7 +4,6 @@ const emits = defineEmits(["increment", "decrement"])
 const handleButtonInc = () => {
   emits("increment")
 }
-
 const handleButtonDec = () => {
   emits("decrement")
 }

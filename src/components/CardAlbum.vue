@@ -4,11 +4,10 @@ import InStockSvg from "@/components/utils/InStockSvg.vue";
 import ButtonStock from "@/components/utils/ButtonStock.vue";
 import CardLayout from "@/components/CardLayout.vue";
 
-
 const props = defineProps({
-  album: Object
+  album: Object,
+  isStock: Boolean
 })
-
 
 const incrementStock = () => {
   props.album.stock++
@@ -21,7 +20,8 @@ const decrementStock = () => {
 </script>
 
 <template>
-  <card-layout>
+  <card-layout
+  >
     <div class="sm:w-44 sm:h-44 lg:w-40 lg:h-40 sm:mr-10 inline-flex items-center justify-center flex-shrink-0">
       <img :src="album?.coverUrl ? album.coverUrl : 'src/assets/img/default.jpg'" alt="cover-album">
     </div>

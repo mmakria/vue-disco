@@ -15,7 +15,7 @@ export const records = [
         "title"          :'In Colour',
         "artist"         :'Jamie xx',
         "year"           :'2015',
-        "stock"          :2,
+        "stock"          :0,
         "pitchforkPos"   :25,
         "comment"        : "Hearing In Colour feels like listening to the dissection of a heartbeat—skittering anxieties mirrored in the snares, the warm glow of love reflected in steel drums, camaraderie sampled via musical voices of the past.",
         "coverUrl"       :'https://media.pitchfork.com/photos/5d7bf74a6eee70000829f8c6/master/w_1600%2Cc_limit/Jamie-xx-In-Colour.jpg'
